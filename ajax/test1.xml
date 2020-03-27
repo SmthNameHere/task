@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<users>
+  <user>
+    <login>egor</login>
+    <name>Egor</name>
+    <email>egor@mail.ru</email>
+    <pass>507488b05bca708743f36aeec48759c7</pass>
+  </user>
+  <user>
+    <login>test</login>
+    <name>test</name>
+    <email>test@mail.ru</email>
+    <pass>0a165f70eed25634b8bbf6f61bfb9ac8</pass>
+  </user>
+</users>
