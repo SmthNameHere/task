@@ -7,25 +7,16 @@
     ?>
   </head>
   <body>
-    <?php require 'blocks/header.php'; ?>
-    <main class="container mt-5">
-        <h2>Привет, <?= base64_decode($_COOKIE['login']) ?></h2>
-          <button class="btn btn-danger mb-2" id="exit_btn">Выйти</button>
+        <?php if (isSet($_COOKIE['login']) != true):
+              require 'blocks/header.php'; ?>
+        <?php else: ?>
+            <main class="container mt-5">
+              <h2>Привет, <?= base64_decode($_COOKIE['login']) ?></h2>
+              <button class="btn btn-danger mb-2" id="exit_btn">Выйти</button>
+        <?php endif; ?>
+
     </main>
         <script src="/js/jquery.min.js"></script>
-        <script>
-          $('#exit_btn').click(function() {
-          $.ajax({
-            url: 'ajax/exit.php',
-            type: 'POST',
-            cache: false,
-            data: {},
-            dataType: 'html',
-            success: function(data) {
-              document.location.reload(true);
-            }
-          });
-          });
-        </script>
+        <script src="/js/exit.js"></script>
   </body>
 </html>
